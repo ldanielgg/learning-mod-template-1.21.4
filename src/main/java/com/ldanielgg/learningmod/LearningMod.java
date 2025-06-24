@@ -1,5 +1,6 @@
 package com.ldanielgg.learningmod;
 
+import com.ldanielgg.learningmod.block.ModBlocks;
 import com.ldanielgg.learningmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -22,5 +23,6 @@ public class LearningMod implements ModInitializer {
 
 		LOGGER.info("Hello Fabric world!");
 		ModItems.initialize();
+		ModBlocks.initialize();
 	}
 }

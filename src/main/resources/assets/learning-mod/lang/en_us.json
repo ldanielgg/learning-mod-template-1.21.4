@@ -1,4 +1,8 @@
 {
   "item.learning-mod.suspicious_substance": "Suspicious Substance",
-  "item.learning-mod.cheese": "Cheese"
+  "item.learning-mod.cheese": "Cheese",
+  "item.learning-mod.pink_garnet": "Pink Garnet",
+  "item.learning-mod.raw_pink_garnet": "Raw Pink Garnet",
+  "item.learning-mod.pink_garnet_block": "Block of Pink Garnet",
+  "item.learning-mod.raw_pink_garnet_block": "Block of Raw Pink Garnet"
 }

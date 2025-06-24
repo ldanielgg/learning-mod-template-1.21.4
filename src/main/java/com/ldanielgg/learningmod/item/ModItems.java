@@ -15,16 +15,19 @@ import java.util.function.Function;
 
 public class ModItems {
 
-    public static final Item SUSPICIOUS_SUBSTANCE = register(
-            "suspicious_substance",
-            Item::new,
-            new Item.Settings());
+    public static final Item SUSPICIOUS_SUBSTANCE = registerItem(
+            "suspicious_substance", Item::new, new Item.Settings());
 
-    public static final Item CHEESE = register("cheese",
-            Item::new,
-            new Item.Settings().food(ModFoodComponents.CHEESE));
+    public static final Item CHEESE = registerItem(
+            "cheese", Item::new, new Item.Settings().food(ModFoodComponents.CHEESE));
 
-    public static Item register(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
+    public static final Item PINK_GARNET = registerItem(
+            "pink_garnet", Item::new, new Item.Settings());
+
+    public static final Item RAW_PINK_GARNET = registerItem(
+            "raw_pink_garnet", Item::new, new Item.Settings());
+
+    public static Item registerItem(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
         // Create the item key
         RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(LearningMod.MOD_ID, name));
 
@@ -39,7 +42,11 @@ public class ModItems {
 
     public static void initialize() {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS)
-                .register((fabricItemGroupEntries -> fabricItemGroupEntries.add(ModItems.SUSPICIOUS_SUBSTANCE)));
+                .register(fabricItemGroupEntries -> {
+                    fabricItemGroupEntries.add(ModItems.SUSPICIOUS_SUBSTANCE);
+                    fabricItemGroupEntries.add(ModItems.PINK_GARNET);
+                    fabricItemGroupEntries.add(ModItems.RAW_PINK_GARNET);
+                });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK)
                 .register((fabricItemGroupEntries -> fabricItemGroupEntries.add(ModItems.CHEESE)));
