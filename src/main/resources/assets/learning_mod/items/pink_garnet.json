@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "learning-mod:item/cheese"
+    "model": "learning_mod:item/pink_garnet"
   }
 }

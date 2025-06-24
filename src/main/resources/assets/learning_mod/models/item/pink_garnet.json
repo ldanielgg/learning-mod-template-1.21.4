@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "learning-mod:item/cheese"
+    "layer0": "learning_mod:item/pink_garnet"
   }
 }

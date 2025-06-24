@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "learning-mod:block/raw_pink_garnet_block"
+    "all": "learning_mod:block/raw_pink_garnet_block"
   }
 }

@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "learning-mod:item/pink_garnet"
+    "model": "learning_mod:item/raw_pink_garnet"
   }
 }
